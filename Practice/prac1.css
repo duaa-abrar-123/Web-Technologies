@@ -2,7 +2,7 @@
   background-color: #fff;
   height: 80px;
   margin: 20px;
-  border: radius 16px;
+  border-radius: 16px;
   padding: o.5rem;
 }
 
@@ -97,3 +97,4 @@
 .hero-section.h2{
   font-size: 1.2sem;
 }
+
