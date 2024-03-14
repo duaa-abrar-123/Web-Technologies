@@ -48,6 +48,13 @@
   color: #eee;
 }
 
+/* CSS to trigger dropdowns on hover */
+@media (min-width: 992px) { /* Adjusting for Bootstrap's lg breakpoint */
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
 @media (min-width: 991px) {
   .nav-link::before {
     content: "";
