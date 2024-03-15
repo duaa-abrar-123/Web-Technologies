@@ -1,16 +1,23 @@
+
+
 .navbar{
     background-color: #fff;
-    height: 80px;
+    height: 60px;
     margin: 20px;
     border-radius: 30px;
     padding: o.5rem;
+
+
   }
   
-  .navbar-brand{
-    font-weight: 500;
-    color:#009970;
-    font: size 24px;
-  }
+ 
+  .navbar-brand img {
+    width: 80px; /* Adjust width as needed */
+    height: 40px; /* Maintain aspect ratio */
+    margin-right: 20px;
+/* Adjust right margin */
+    padding: 0px; /* Adjust padding */
+}
   
   .login-button {
     background-color: #009970;
@@ -45,7 +52,7 @@
     box-shadow: none;
     outline: none;
   }
-  
+
   .nav-link {
     color: #666777;
     font-weight: 500;
@@ -55,7 +62,8 @@
   .nav-link:hover, .nav-link.active {
     color: #eee;
   }
-  
+
+ 
   /* CSS to trigger dropdowns on hover */
   @media (min-width: 992px) { /* Adjusting for Bootstrap's lg breakpoint */
     .navbar .nav-item.dropdown:hover .dropdown-menu {
@@ -84,7 +92,7 @@
   }
   
   .hero-section{
-    background: url(lab1_images/img2.webp) no-repeat center;
+    background: url() no-repeat center;
     background-size: cover;
     width:100%;
     height: 100vh;
@@ -95,10 +103,10 @@
     background-color: rgba(0,0,0 , 0.6);
     content:"";
     position: absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0;
+    top:100px;
+    right:20px;
+    bottom:80px;
+    left:20px;
   }
   
   .hero-section.container{

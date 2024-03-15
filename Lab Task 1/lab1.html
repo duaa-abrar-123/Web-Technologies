@@ -19,7 +19,9 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand me-auto" href="#">Logo</a>
+        <a class="navbar-brand me-auto" href="#">
+            <img src="lab1_images/logo2_bg.png" alt="Logo">
+        </a>
         <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -80,25 +82,92 @@
                             <li><a class="dropdown-item" href="caffeine.html">Caffeine</a></li>
                         </ul>
                     </li>
+
+                    
+                  
+
+                   
+
+                    
                     <!-- More nav items... -->
                
                 
             </div>
         </div> 
-    
+         <!-- Search bar -->
+      <!-- Search bar -->
+<!-- Search bar -->
+<form class="d-flex ms-auto my-2 my-lg-0" style="max-width: 300px;">
+    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px; outline: none;">
+</form>
+
+        <!-- User icon (FontAwesome) -->
+        <a class="btn-user" href="user-profile.html">
+            
+            <img src="lab1_images/user.png" alt="" style="width: 30px; height: 30px;">
+        </a>
+
+        <!-- Cart icon -->
+        <button class="btn btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">
+            <img src="lab1_images/cart.png" alt="Cart" style="width:35; height: 35px;">
+        </button>
         
+
+
+
+
     </div>
 </nav>
 
+<!-- Cart sidebar -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel" data-bs-scroll="true" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartSidebarLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Shopping cart content -->
+    </div>
+</div>
     
   
-  <section class="hero-section">
-    <div class= "container d-flex align-item justify-content-center fs-3
-    text-white flex-column">
-            <h1>Responsive navbar</h1>
-            <h2>Bootstrap</h2>
+<section class="hero-section">
+    <div class="container d-flex align-items-center justify-content-center text-white flex-column">
+      <!-- Carousel -->
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="path/to/your/image1.jpg" class="d-block w-100" alt="Slide 1">
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="path/to/your/image2.jpg" class="d-block w-100" alt="Slide 2">
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="path/to/your/image3.jpg" class="d-block w-100" alt="Slide 3">
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- End of Carousel -->
+  
+      <!-- Text content (You can replace this with your content) -->
+      <h1>Your Heading</h1>
+      <h2>Your Subheading</h2>
     </div>
   </section>
+  
   <!-- Additional link outside of the offcanvas-body which seems to be a login button -->
  
   
