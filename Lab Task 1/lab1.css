@@ -157,9 +157,22 @@ body {
   border: none;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.custom-card:hover {
+  transform: scale(1.05); /* Creates a zoom effect */
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Enhances the shadow */
 }
 
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.custom-card:hover .card-img-top {
+  transform: scale(1.1); /* Zooms in the image */
+}
 .btn{
   background-color: #666777;
   border-radius: 25px;
@@ -190,3 +203,61 @@ body {
 .card-text{
   margin-top: 0px;
 }
+
+.fixed-bottom-section {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+}
+
+.column h4 {
+  margin-bottom: 15px;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li a {
+  text-decoration: none;
+  color: inherit; 
+  transition: color 0.3s ease;
+}
+
+.column ul li a:hover {
+  color: #007bff; 
+}
+
+.card {
+  width: 100%; 
+  border: 1px solid #ccc; 
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+
+.image-container {
+  display: flex; 
+  justify-content:center; 
+  align-items:normal; 
+  overflow-x: auto; 
+}
+
+.image-container img {
+  flex: 0 0 auto; 
+  height: 100px; 
+  margin-right: 50px; 
+}
+
+
