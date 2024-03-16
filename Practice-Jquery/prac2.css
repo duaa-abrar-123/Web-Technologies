@@ -1,0 +1,72 @@
+body {
+    background-image: url('/Lab\ Task\ 1/lab1_images/img2.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    
+
+  }
+
+.form-control{
+    width: 50vh;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    color: rgba(0, 0, 0, 0.5);
+    font-size:85%;
+    padding-left: 20px;
+    
+}
+.form-control:hover {
+    font-size: 90%; 
+}
+.form-label{
+    margin-left: 5px;
+    color: #666777;
+}
+.section-form{
+    width: 10vh;
+
+
+}
+
+.container-edit{
+    margin-left: 30vh;
+    margin-right: 30vh;
+}
+.btn{
+    margin-left: 35vh;
+    border-radius: 20px;
+    background-color: #666777;
+    border: none;
+}
+ h2{
+    font-size: x-large;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666777;
+}
+
+.col{
+    margin-bottom: 10px;
+}
+.container {
+    background-image: url('path/to/your/container-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 30px; 
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    width: 60%;
+    margin: auto;
+    height: 50%;
+    margin-bottom: 0px;
+}
+
+.select{
+    border-radius: 10px; 
+    justify-content: center;
+}

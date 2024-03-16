@@ -1,9 +1,9 @@
 
 body {
-  background-image: url('lab1_images/img2.webp'); /* Replace "your_image_url_here" with the URL of your image */
-  background-size: cover; /* This ensures the background image covers the entire screen */
-  background-position: center; /* This centers the background image */
-  background-repeat: no-repeat; /* This prevents the background image from repeating */
+  background-image: url('lab1_images/img2.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .navbar{
@@ -18,11 +18,11 @@ body {
   
  
   .navbar-brand img {
-    width: 80px; /* Adjust width as needed */
-    height: 40px; /* Maintain aspect ratio */
+    width: 80px; 
+    height: 40px; 
     margin-right: 20px;
-/* Adjust right margin */
-    padding: 0px; /* Adjust padding */
+
+    padding: 0px; 
 }
   
   .login-button {
@@ -41,12 +41,12 @@ body {
   }
   
   .navbar .btn {
-    margin-right: 1rem; /* Space for the button from the edge of the screen */
+    margin-right: 1rem; 
 }
 
-/* If you need additional styling for the cart icon */
+
 .navbar .fas.fa-shopping-cart {
-    font-size: 1.5rem; /* Example size, adjust as needed */
+    font-size: 1.5rem; 
 }
   
   .navbar-toggler {
@@ -77,14 +77,15 @@ body {
     transform: translateY(-5px);
   }
  
-  /* CSS
   
-  /* CSS to trigger dropdowns on hover */
-  @media (min-width: 992px) { /* Adjusting for Bootstrap's lg breakpoint */
+  
+ 
+  @media (min-width: 992px) {
     .navbar .nav-item.dropdown:hover .dropdown-menu {
-      display: block;
+      display:block
     }
   }
+  
   
   @media (min-width: 991px) {
     .nav-link::before {
@@ -108,11 +109,11 @@ body {
    
   
   .heading {
-    padding: 20px; /* Adjust as needed */
+    padding: 20px; 
     margin: 20px 0;
     margin-top: 75px;
     margin-left: auto;
-    margin-right: auto; /* Adjust as needed */
+    margin-right: auto; 
 }
 
 
@@ -162,8 +163,8 @@ body {
   cursor: pointer;
 }
 .custom-card:hover {
-  transform: scale(1.05); /* Creates a zoom effect */
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Enhances the shadow */
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
 }
 
 .card-img-top {
@@ -171,7 +172,7 @@ body {
 }
 
 .custom-card:hover .card-img-top {
-  transform: scale(1.1); /* Zooms in the image */
+  transform: scale(1.1); 
 }
 .btn{
   background-color: #666777;
