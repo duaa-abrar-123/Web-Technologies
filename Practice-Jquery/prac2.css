@@ -3,20 +3,24 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    margin:0;
+    padding:0;
     
 
   }
 
 .form-control{
-    width: 50vh;
+    width: 70%;
     border-radius: 30px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-right: 20px;
     background-color: rgba(255, 255, 255, 0.4); 
     color: rgba(0, 0, 0, 0.5);
     font-size:85%;
     padding-left: 20px;
-    
+    margin-bottom: 10px;
+    padding: 10px; 
+    box-sizing: border-box;
 }
 .form-control:hover {
     font-size: 90%; 
@@ -25,21 +29,43 @@ body {
     margin-left: 5px;
     color: #666777;
 }
+.required::before {
+    content: "*";
+    color: #666777;
+    margin-right: 4px; 
+}
 .section-form{
     width: 10vh;
 
 
 }
-
+.row{
+    display:flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex: 0 0 50%; 
+    max-width: 50%; 
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    .col {
+        flex: 0 0 100%;  
+        max-width: 100%;
+    }
+}
 .container-edit{
     margin-left: 30vh;
     margin-right: 30vh;
 }
 .btn{
-    margin-left: 35vh;
+    
     border-radius: 20px;
     background-color: #666777;
     border: none;
+    padding: 10px 20px;
+    display: block;
+    margin: auto;
 }
  h2{
     font-size: x-large;
@@ -60,10 +86,14 @@ body {
     border-radius: 30px; 
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    width: 60%;
     margin: auto;
     height: 50%;
     margin-bottom: 0px;
+    max-width: 60%; 
+    width: 100%; 
+    margin: auto; 
+    margin-top: 50px;
+
 }
 
 .select{

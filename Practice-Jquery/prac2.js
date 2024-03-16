@@ -5,7 +5,7 @@ $(document).ready(function() {
         let message = $('#message').val().trim();
 
         if (name === "" || email === "" || message === "") {
-            e.preventDefault(); // Prevent form submission
+            e.preventDefault(); 
             alert('Please fill in all fields.');
         }
     });
