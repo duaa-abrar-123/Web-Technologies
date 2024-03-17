@@ -1,0 +1,71 @@
+body {
+    background-image: url('/Lab\ Task\ 1/lab1_images/img2.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin:0;
+    padding:0;
+    
+
+  }
+
+
+
+body {
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.4); 
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 50px;
+}
+
+h2 {
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.btn-primary {
+    background-color: #666777;
+    border-color: #666777;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.btn-primary:hover {
+    background-color: rgba(104, 30, 114, 0.4); 
+    border-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .form-control, .btn-primary {
+        font-size: 14px;
+    }
+}
