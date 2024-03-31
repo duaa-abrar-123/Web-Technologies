@@ -1,0 +1,118 @@
+/* navbar.css */
+
+/* Reset padding and margin to avoid browser inconsistencies */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set background color for navbar */
+  .bg-body-tertiary {
+    background-color: #e9ecef; /* Tertiary background color */
+  }
+  
+  /* Set the navbar brand style */
+  .navbar-brand {
+    font-weight: bold;
+    color: #007bff; /* Bootstrap blue for the brand */
+  }
+  
+  /* Style the navbar links */
+  .nav-link {
+    color: #555; /* A darker grey for the text */
+  }
+  
+  .nav-link:hover {
+    color: #007bff; /* Bootstrap blue for hover */
+  }
+  
+  /* Style for the active navbar link */
+  .nav-link.active {
+    color: #fff; /* White color for the active link */
+    background-color: #007bff; /* Bootstrap blue for the active link background */
+  }
+  
+  /* Dropdown menu style */
+  .dropdown-menu {
+    border: none; /* Remove the default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add some shadow for a subtle depth effect */
+  }
+  
+  /* Add any additional styling you need below */
+  .offcanvas-header {
+    background-color: #f8f9fa; /* Light grey background for the header */
+    border-bottom: 1px solid #e7e7e7; /* A subtle border for separation */
+  }
+  
+  .offcanvas-title {
+    font-weight: bold;
+    color: #007bff; /* Blue color for the brand/title in the off-canvas */
+  }  
+  .offcanvas-body {
+    padding: 1rem; /* Default padding for the body content */
+  }
+  
+  /* styles.css */
+
+  .section{
+margin-top: 10px;
+margin-bottom: 10px;
+text-align: center;
+  }
+  .container h2{
+    font-size: large;
+  }
+ 
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background color */
+  }
+  
+  /* Styles for left column */
+  #left-column {
+    padding: 15px; /* Add some padding */
+    background-color: white; /* White background */
+    border-right: 1px solid #ddd; /* Line separating from the right column */
+  }
+  
+  /* Styles for right column */
+  #right-column {
+    padding: 15px; /* Add some padding */
+    background-color: white; /* White background */
+  }
+  
+  #alexa-answer {
+    margin-bottom: 20px; /* Space below the Alexa answer section */
+  }
+  
+  #alexa-answer h2 {
+    color: #007bff; /* Use a blue color for the heading */
+  }
+  
+  #alexa-answer p {
+    color: #666; /* Dark gray text color */
+  }
+  
+  #alexa-answer a {
+    color: #007bff; /* Use a blue color for links */
+  }
+  
+  #alexa-answer button.btn-primary {
+    background-color: #ffa41c; /* Orange button for primary action */
+    border: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 991px) {
+    #left-column, #right-column {
+      border-right: none;
+      border-bottom: 1px solid #ddd; /* Add border to the bottom for small screens */
+    }
+  }
+  
+  /* Additional custom styles */
+  
