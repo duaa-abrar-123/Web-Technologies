@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAWN Example</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="lab-exam.css">
+</head>
+<body>
+
+<section class="text-center">
+  <div class="container">
+    <!-- i have made changes here to place the path on the rightside of the title -->
+    <!-- to place below the title change it to  -->
+   <!-- <h1 class="title">DAWN <h2 span id="image-path" 
+    style="font-size: smaller;"></span></h2></h1>-->
+    <h1 class="title">DAWN <span id="image-path" 
+        style="font-size: smaller;"></span></h1>
+
+    <p class="title-today">TODAY'S PAPER | APRIL 01, 2024</p><hr class="line">
+  </div>
+</section>
+
+<nav class="navbar navbar-expand-lg ">
+  <div class="container">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Latest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Gaza Siege</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pakistan</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opinion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Business</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">World</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Culture</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Prism</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sport</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+  </div>
+</nav>
+<hr class="line1">
+<div class="container mt-5">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="car.jpg" alt="First slide" style="max-width: 40%; margin: auto;">
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="line2">
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <h5>Israeli military says operation at Gaza’s Al-Shifa hospital 'completed'</h5>
+      <img src="is.jpg" alt="News Image" class="img-fluid">
+      <p>Doctor says more than 20 bodies recovered from hospital complex.</p>
+      <p>Updated 32 minutes ago</p>
+    </div>
+    <div class="col">
+      <h5>Editorial: It seems that some circles are trying to undermine finmin's role in the cabinet</h5>
+      <img src="ed.png" alt="Editorial Image" class="img-fluid">
+      <h5>Mirror, mirror: Why the IHC...</h5>
+      <img src="mir.jpg" alt="Editorial Image" class="img-fluid">
+    </div>
+    <div class="col">
+      <h5>Coalition eyes two-thirds majority in tomorrow’s Senate polls</h5>
+      <img src="col.jpg" alt="Editorial Image" class="img-fluid">
+    </div>
+    <div class="col">
+      <h5>ORIGINS OF THE ORANGI PILOT PROJECT SANITATION PROGRAMME</h5>
+      <img src="or.jpg" alt="Editorial Image" class="img-fluid">
+      <ol>
+        <li>Abdullah Momand</li>
+        <li>Zahoor</li>
+        <li>Malik Asad</li>
+        <li>Imtiaz Ali</li>
+        <li>Mohammad Yaqoob</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('img').hover(function(){
+        
+        var imagePath = $(this).attr('src');
+        $('#image-path').text(imagePath);
+      }, function(){
+       
+        $('#image-path').text('');
+      });
+    });
+    </script>
+
+</body>
+</html>
