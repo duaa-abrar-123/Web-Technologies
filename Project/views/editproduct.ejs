@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Product</title>
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+  <h1>Edit Product</h1>
+  <form action="/products/<%= product._id %>?_method=PUT" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= product.name %>" required>
+    <label for="category">Category:</label>
+    <input type="text" name="category" id="category" value="<%= product.category %>" required>
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price" value="<%= product.price %>" required>
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" required><%= product.description %></textarea>
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+      <option value="Available" <%= product.status === 'Available' ? 'selected' : '' %>>Available</option>
+      <option value="Out of Stock" <%= product.status === 'Out of Stock' ? 'selected' : '' %>>Out of Stock</option>
+    </select>
+    <button type="submit">Update Product</button>
+  </form>
+</body>
+</html>

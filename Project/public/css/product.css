@@ -1,0 +1,131 @@
+body {
+    background-image: url('/images/img2.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-control {
+    width: 70%;
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.4); 
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 85%;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    padding: 10px; 
+    box-sizing: border-box;
+  }
+  
+  .form-control:hover {
+    font-size: 90%; 
+  }
+  
+  .form-label {
+    margin-left: 5px;
+    color: #666777;
+  }
+  
+  .required::after {
+    content: "*";
+    color: #666777;
+    margin-left: 4px; 
+  }
+  
+  .section-form {
+    width: 10vh;
+  }
+  
+  .container-edit {
+    margin-left: 30vh;
+    margin-right: 30vh;
+  }
+  
+  .btn {
+    border-radius: 20px;
+    background-color: #666777;
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: x-large;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #666777;
+  }
+  
+  .col {
+    margin-bottom: 10px;
+  }
+  
+  .container {
+    background-image: url('path/to/your/container-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 30px; 
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    margin: auto;
+    height: 50%;
+    margin-bottom: 0px;
+    max-width: 60%; 
+    width: 100%; 
+    margin-top: 50px;
+  }
+  
+  .select {
+    border-radius: 10px; 
+    justify-content: center;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col {
+    flex: 0 0 50%; 
+    max-width: 50%; 
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .col {
+      flex: 0 0 100%;  
+      max-width: 100%;
+    }
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  a {
+    margin-right: 10px;
+  }
+  
+  form {
+    display: inline;
+  }
+  

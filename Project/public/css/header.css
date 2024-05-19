@@ -1,0 +1,135 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    height: 60px;
+    margin: 20px;
+    border-radius: 30px;
+    border-color: #666777;
+    border-width: 10px;
+    padding: 0.5rem;
+  }
+  
+  .navbar-brand img {
+    width: 80px;
+    height: 40px;
+    margin-right: 20px;
+    padding: 0px;
+  }
+  
+  .login-button {
+    background-color: #009970;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-right: 1rem;
+    text-decoration: none;
+    transition: 0.3s background-color;
+  }
+  
+  .login-button:hover {
+    background-color: #00b383;
+  }
+  
+  .navbar .btn {
+    margin-right: 1rem;
+  }
+  
+  .navbar .fas.fa-shopping-cart {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+  }
+  
+  .navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .nav-link {
+    color: #666777;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: #eee;
+  }
+  
+  .btn-user img:hover {
+    transform: translateY(-5px);
+  }
+  
+  .btn-link img:hover {
+    transform: translateY(-5px);
+  }
+  
+  @media (min-width: 992px) {
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 991px) {
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #ee997e;
+      visibility: hidden;
+      transition: 0.3s ease-in-out;
+    }
+  
+    .nav-link:hover::before, .nav-link.active::before {
+      width: 100%;
+      visibility: visible;
+    }
+  }
+
+  
+
+
+  /* Bottom Section  */
+.fixed-bottom-section {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .column h4 {
+    margin-bottom: 15px;
+  }
+  
+  .column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .column ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+  }
+  
+  .column ul li a:hover {
+    color: #007bff;
+  }
+  

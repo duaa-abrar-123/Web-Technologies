@@ -1,0 +1,115 @@
+body {
+    background-image: url('/images/img2.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #666777;
+  }
+  
+  /* Additional Styles */
+  .heading {
+    padding: 20px;
+    margin: 20px 0;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .section {
+    text-align: center;
+    font-size: medium;
+    background-color: #666777;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  
+  .section2 {
+    margin-top: 100px;
+  }
+  
+  .all {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .custom-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img-top {
+    transition: transform 0.5s ease;
+  }
+  
+  .custom-card:hover .card-img-top {
+    transform: scale(1.1);
+  }
+  
+  .btn {
+    background-color: #666777;
+    border-radius: 25px;
+    margin-left: 15px;
+  }
+  
+  .price {
+    margin-left: 25px;
+  }
+  
+  .btn1 {
+    border: none;
+    background-color: #fff;
+  }
+  
+  .carousel {
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .row {
+    border-radius: 30px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+  
+  .card-text {
+    margin-top: 0px;
+  }
+  
+  .card {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    overflow-x: auto;
+  }
+  
+  .image-container img {
+    flex: 0 0 auto;
+    height: 100px;
+    margin-right: 50px;
+  }
+  

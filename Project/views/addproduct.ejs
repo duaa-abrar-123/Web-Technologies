@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Add New Product</h2>
+    <form action="/products" method="POST">
+      <div class="row">
+        <div class="col">
+          <label for="name" class="form-label required">Name:</label>
+          <input type="text" name="name" id="name" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="category" class="form-label required">Category:</label>
+          <input type="text" name="category" id="category" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="price" class="form-label required">Price:</label>
+          <input type="number" name="price" id="price" class="form-control" required>
+        </div>
+        <div class="col">
+          <label for="description" class="form-label required">Description:</label>
+          <textarea name="description" id="description" class="form-control" required></textarea>
+        </div>
+        <div class="col">
+          <label for="status" class="form-label required">Status:</label>
+          <select name="status" id="status" class="form-control select">
+            <option value="Available">Available</option>
+            <option value="Out of Stock">Out of Stock</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn">Add Product</button>
+    </form>
+  </div>
+</body>
+</html>
