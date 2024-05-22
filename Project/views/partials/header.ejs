@@ -53,7 +53,7 @@
 
                     <!-- Dropdown for SkinConcern -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link mx-lg-2" href="#" id="SkinConcernDropdown" role="button" aria-expanded="false">
+                        <a class="nav-link mx-lg-2" href="/products" id="SkinConcernDropdown" role="button" aria-expanded="false">
                             Shop By Skin Concern
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="SkinConcernDropdown">
@@ -94,10 +94,16 @@
 </form>
 
        
-        <a class="btn-user" href="user-profile.html">
-            
-            <img src="images/user.png" alt="" style="width: 30px; height: 30px;">
-        </a>
+<div class="nav-item dropdown ms-auto">
+    <a class="nav-link mx-lg-2" href="#" id="userD" role="button" aria-expanded="false">
+        <img src="images/user.png" alt="" style="width: 30px; height: 30px;">
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+    </ul>
+</div>
 
        
         <button class="btn1 btn-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartSidebar" aria-controls="cartSidebar">

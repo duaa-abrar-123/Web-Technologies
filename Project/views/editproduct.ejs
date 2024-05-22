@@ -7,22 +7,40 @@
   <link rel="stylesheet" href="/css/product.css">
 </head>
 <body>
-  <h1>Edit Product</h1>
-  <form action="/products/<%= product._id %>?_method=PUT" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name" value="<%= product.name %>" required>
-    <label for="category">Category:</label>
-    <input type="text" name="category" id="category" value="<%= product.category %>" required>
-    <label for="price">Price:</label>
-    <input type="number" name="price" id="price" value="<%= product.price %>" required>
-    <label for="description">Description:</label>
-    <textarea name="description" id="description" required><%= product.description %></textarea>
-    <label for="status">Status:</label>
-    <select name="status" id="status">
-      <option value="Available" <%= product.status === 'Available' ? 'selected' : '' %>>Available</option>
-      <option value="Out of Stock" <%= product.status === 'Out of Stock' ? 'selected' : '' %>>Out of Stock</option>
-    </select>
-    <button type="submit">Update Product</button>
-  </form>
+  <div class="container">
+    <h2>Edit Product</h2>
+    <form action="/products/<%= product._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <div class="row">
+        <div class="col">
+          <label for="name" class="form-label required">Name:</label>
+          <input type="text" name="name" id="name" class="form-control" value="<%= product.name %>" required>
+        </div>
+        <div class="col">
+          <label for="category" class="form-label required">Category:</label>
+          <input type="text" name="category" id="category" class="form-control" value="<%= product.category %>" required>
+        </div>
+        <div class="col">
+          <label for="price" class="form-label required">Price:</label>
+          <input type="number" name="price" id="price" class="form-control" value="<%= product.price %>" required>
+        </div>
+        <div class="col">
+          <label for="description" class="form-label required">Description:</label>
+          <textarea name="description" id="description" class="form-control" required><%= product.description %></textarea>
+        </div>
+        <div class="col">
+          <label for="status" class="form-label required">Status:</label>
+          <select name="status" id="status" class="form-control select">
+            <option value="Available" <%= product.status === 'Available' ? 'selected' : '' %>>Available</option>
+            <option value="Out of Stock" <%= product.status === 'Out of Stock' ? 'selected' : '' %>>Out of Stock</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="image" class="form-label">Image:</label>
+          <input type="file" name="image" id="image" class="form-control">
+        </div>
+      </div>
+      <button type="submit" class="btn">Update Product</button>
+    </form>
+  </div>
 </body>
 </html>

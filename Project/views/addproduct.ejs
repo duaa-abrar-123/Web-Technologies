@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <h2>Add New Product</h2>
-    <form action="/products" method="POST">
+    <form action="/products" method="POST" enctype="multipart/form-data">
       <div class="row">
         <div class="col">
           <label for="name" class="form-label required">Name:</label>
@@ -33,6 +33,10 @@
             <option value="Available">Available</option>
             <option value="Out of Stock">Out of Stock</option>
           </select>
+        </div>
+        <div class="col">
+          <label for="image" class="form-label">Image:</label>
+          <input type="file" name="image" id="image" class="form-control">
         </div>
       </div>
       <button type="submit" class="btn">Add Product</button>

@@ -2,208 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" type="x-icon" href="images/logo2_bg.png"
+  <link rel="shortcut icon" type="x-icon" href="images/logo2_bg.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Derma | A glowy life</title>
 
- 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
   rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
   crossorigin="anonymous">
-    
- 
-
   <link href="/css/home.css" rel="stylesheet">
   <link href="/css/header.css" rel="stylesheet">
-
 </head>
 <body>
 
-    <%- include('./partials/header.ejs')%>
-<!-- Cart sidebar -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel" data-bs-scroll="true" data-bs-backdrop="true">
+  <%- include('./partials/header.ejs')%>
+
+  <!-- Display username if logged in -->
+  <% if (user) { %>
+    <div>Welcome, <%= user.name %>!</div>
+  <% } %>
+
+  <!-- Cart sidebar -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSidebar" aria-labelledby="cartSidebarLabel" data-bs-scroll="true" data-bs-backdrop="true">
     <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="cartSidebarLabel">Shopping Cart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <h5 class="offcanvas-title" id="cartSidebarLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <!-- Shopping cart content -->
+      <!-- Shopping cart content -->
     </div>
-</div>
+  </div>
 
   <!-- Carousel -->
   <div class="section2">
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="max-height: 450px; overflow: hidden;">
-
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="max-height: 450px; overflow: hidden;">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="images/slider3 (1).webp" class="d-block w-100" alt="...">
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
   <div class="section">
     <h5>Shop All</h5>
-    
   </div>
-    
+
   <div class="container1">
     <div class="row">
-
-        <!-- First Row -->
+      <% products.forEach(product => { %>
         <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Pillowy and plumpy serum</h5>
-                    <h6 class="card-text">5% 5D Hyaluronic Acid, 1% Niacinamide <h6 class="price"><b>Rs.1,850</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
+          <div class="card custom-card" style="width: 18rem;">
+            <img src="<%= product.imageUrl %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><%= product.name %></h5>
+              <h6 class="card-text"><%= product.description %></h6>
+              <h6 class="price"><b>Rs.<%= product.price %></b>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+              </h6>
             </div>
+          </div>
         </div>
-
-       
-
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/pro1.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Pink Clay Mask | Kaolin Mask</h5>
-                    <h6 class="card-text">
-                        5% Rose Kaolin Clay, Saffron, Vitamin E & Aloe Vera <h6 class="price"><b>
-                        Rs.5,700</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey8.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Rose Cloud Cleanser | pH friendly</h5>
-                    <h6 class="card-text">
-                        Pineapple Extract & Hyaluronic Acid<h6 class="price"><b>
-                        Rs.3,900</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div> 
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/res1 (1).webp"class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Juicy Mist | Peppy Face Mist</h5>
-                    <h6 class="card-text">Lemon Peel oil & Pomegranate extract <h6 class="price"><b>Rs.2,500</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-
+      <% }); %>
     </div>
-</div>
-    
+  </div>
 
-    <!-- Second Row -->
-    <div class="row">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+  crossorigin="anonymous"></script>
 
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey3.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Daily Radiance Toner</h5>
-                    <h6 class="card-text">
-                        3% Niacinamide, 2% Alpha Arbutin, Tea Tree Extract <h6 class="price"><b>
-                        Rs.2,000</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey7.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Glow and radiate serum</h5>
-                    <h6 class="card-text">
-                        10% Vitamin C & Sunflower seed oil <h6 class="price"><b>
-                        Rs.1,750</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey9.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Soy smoothie</h5>
-                    <h6 class="card-text">
-                        4 in 1 Charged with Amino Rich Soy proteins, Rose Water <h6 class="price"><b>
-                        Rs.4,2350</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-3">
-            <div class="card custom-card" style="width: 18rem;">
-                <img src="images/hey6.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Exfoliating Toner</h5>
-                    <h6 class="card-text">
-                        6% Glycolic Acid, 1% Niacinamide, Salicylic acid<h6 class="price"><b>
-                        Rs.3,400</b><a href="#" class="btn btn-primary">Add to cart</a></h6> </h6>
-                    
-                </div>
-            </div>
-
-        </div>
-
-
-    </div>
-</div>
-
-<div class="card">
-    <div class="image-container">
-        <img src="images/c1.webp" alt="Image 1">
-        <img src="images/c2.webp" alt="Image 2">
-        <img src="images/c3.webp" alt="Image 3">
-        <img src="images/c4.webp" alt="Image 4">
-        <img src="images/c5.webp" alt="Image 5">
-        <img src="images/c6.webp" alt="Image 6">
-    </div>
-</div>
-
-
-
-
-  
-  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
-    crossorigin="anonymous"></script>
-
-    <%- include('./partials/footer.ejs')%>
+  <%- include('./partials/footer.ejs')%>
 </body>
 </html>

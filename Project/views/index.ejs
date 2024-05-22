@@ -4,40 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skincare Products</title>
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
+  <link rel="stylesheet" href="/css/product.css">
+</head> <%- include('./partials/header.ejs')%>
 <body>
-  <h1>Skincare Products</h1>
-  <a href="/products/new">+ Add New</a>
-  <table>
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th>Status</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% products.forEach((product, index) => { %>
+ 
+  <div class="container">
+    <h2>Skincare Products</h2>
+    <a href="/products/new" class="btn btn-primary">+ Add New</a>
+    <table class="table">
+      <thead>
         <tr>
-          <td><%= index + 1 %></td>
-          <td><%= product.name %></td>
-          <td><%= product.category %></td>
-          <td><%= product.price %></td>
-          <td><%= product.status %></td>
-          <td>
-            <a href="/products/<%= product._id %>">View</a>
-            <a href="/products/<%= product._id %>/edit">Edit</a>
-            <form action="/products/<%= product._id %>?_method=DELETE" method="POST" style="display:inline;">
-              <button type="submit">Delete</button>
-            </form>
-          </td>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Action</th>
         </tr>
-      <% }) %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% products.forEach((product, index) => { %>
+          <tr>
+            <td><%= (currentPage - 1) * limit + index + 1 %></td>
+            <td><%= product.name %></td>
+            <td><%= product.category %></td>
+            <td><%= product.price %></td>
+            <td><%= product.status %></td>
+            <td>
+              <a href="/products/<%= product._id %>" class="btn btn-info">View</a>
+              <a href="/products/<%= product._id %>/edit" class="btn btn-warning">Edit</a>
+              <form action="/products/<%= product._id %>?_method=DELETE" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <% if (currentPage > 1) { %>
+          <li class="page-item">
+            <a class="page-link" href="?page=<%= currentPage - 1 %>&limit=<%= limit %>" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+        <% } %>
+        <% for (let i = 1; i <= totalPages; i++) { %>
+          <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+            <a class="page-link" href="?page=<%= i %>&limit=<%= limit %>"><%= i %></a>
+          </li>
+        <% } %>
+        <% if (currentPage < totalPages) { %>
+          <li class="page-item">
+            <a class="page-link" href="?page=<%= currentPage + 1 %>&limit=<%= limit %>" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        <% } %>
+      </ul>
+    </nav>
+  </div>
 </body>
 </html>
