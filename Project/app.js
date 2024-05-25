@@ -4,7 +4,6 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const multer = require('multer');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
@@ -14,6 +13,7 @@ const User = require('./models/user');
 const Product = require('./models/product'); // Ensure Product model is imported
 const productRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
+const cartRoutes = require('./routes/cart'); // Import cart routes
 
 // Session and Cookie Configuration
 app.use(cookieParser());
@@ -82,6 +82,7 @@ mongoose.connect('mongodb://localhost:27017/Project', {
 // Routes
 app.use('/products', productRoutes);
 app.use(authRoutes);
+app.use('/cart', cartRoutes); // Use cart routes
 
 // Protect Home Route
 function ensureAuthenticated(req, res, next) {

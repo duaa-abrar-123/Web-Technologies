@@ -6,13 +6,102 @@ body {
   color: #666777;
 }
 
-/* Additional Styles */
 .heading {
   padding: 20px;
   margin: 20px 0;
   margin-top: 75px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.pagination .page-link {
+  background-color: #666777; /* Change this to your desired button color */
+  color: white;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.pagination .page-link:hover {
+  background-color: #0056b3; /* Darker shade for hover */
+  opacity: 0.7; /* Make it a bit transparent on hover */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: rgb(46, 28, 89); /* Active page color */
+  opacity: 1;
+}
+
+.pagination .page-item.active .page-link:hover {
+  opacity: 1;
+}
+
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.cart-item .product-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item .product-info h6 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.offcanvas-body .btn-outline-secondary {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #fff; /* Lighten text color */
+}
+
+.offcanvas-body .btn-outline-secondary:hover {
+  opacity: 0.7; /* Add transparency on hover */
+}
+
+.offcanvas-body .btn-outline-danger {
+  padding: 0 10px;
+  color: #fff; /* Lighten text color */
+}
+
+.offcanvas-body .btn-outline-danger:hover {
+  opacity: 0.7; /* Add transparency on hover */
+}
+
+.offcanvas-body .quantity-display {
+  width: 30px;
+  text-align: center;
+}
+
+.border-top {
+  border-top: 1px solid #ddd;
 }
 
 .section {
@@ -66,6 +155,11 @@ body {
   background-color: #666777;
   border-radius: 25px;
   margin-left: 15px;
+  color: white; /* Lighten text color */
+}
+
+.btn:hover {
+  opacity: 0.7; /* Add transparency on hover */
 }
 
 .price {

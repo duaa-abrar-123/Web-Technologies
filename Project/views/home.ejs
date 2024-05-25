@@ -28,7 +28,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <!-- Shopping cart content -->
+      <!-- Shopping cart content will be dynamically added here -->
     </div>
   </div>
 
@@ -63,7 +63,7 @@
 
   <div class="container1">
     <div class="row">
-      <% products.forEach(product => { %>
+      <% products.forEach((product, index) => { %>
         <div class="col-md-3">
           <div class="card custom-card" style="width: 18rem;">
             <img src="<%= product.imageUrl %>" class="card-img-top" alt="...">
@@ -80,10 +80,35 @@
     </div>
   </div>
 
+  <!-- Pagination Controls -->
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <% if (currentPage > 1) { %>
+        <li class="page-item">
+          <a class="page-link" href="?page=<%= currentPage - 1 %>&limit=<%= limit %>" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+      <% } %>
+      <% for (let i = 1; i <= totalPages; i++) { %>
+        <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+          <a class="page-link" href="?page=<%= i %>&limit=<%= limit %>"><%= i %></a>
+        </li>
+      <% } %>
+      <% if (currentPage < totalPages) { %>
+        <li class="page-item">
+          <a class="page-link" href="?page=<%= currentPage + 1 %>&limit=<%= limit %>" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
   crossorigin="anonymous"></script>
-
+  <script src="/js/cart.js"></script> <!-- Include the cart script -->
   <%- include('./partials/footer.ejs')%>
 </body>
 </html>

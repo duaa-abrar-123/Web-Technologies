@@ -6,31 +6,42 @@ const upload = require('../middlewares/upload');
 // Get all products with pagination
 router.get('/', async (req, res) => {
   try {
-    const limit = parseInt(req.query.limit) || 10;
-    const page = parseInt(req.query.page) || 1;
+    const limit = 8; // Set the limit of products per page
+    const currentPage = parseInt(req.query.page) || 1; // Rename page to currentPage
     const totalProducts = await Product.countDocuments();
     const totalPages = Math.ceil(totalProducts / limit);
     const products = await Product.find()
-      .skip((page - 1) * limit)
+      .skip((currentPage - 1) * limit)
       .limit(limit);
-    res.render('index', { 
+
+    // Log the variables to ensure they are correct
+    console.log({
+      products,
+      currentPage,
+      totalPages,
+      limit
+    });
+
+    // Render the home template with required variables
+    res.render('home', { 
       products, 
-      currentPage: page, 
+      currentPage, // Pass currentPage to the template
       totalPages, 
-      limit 
+      limit, 
+      user: req.user // Ensure the user variable is also passed if needed
     });
   } catch (error) {
+    console.error('Error fetching products:', error);
     res.status(500).send(error);
   }
 });
-
 // Get form to add new product
 router.get('/new', (req, res) => {
   res.render('addProduct');
 });
 
 // Add new product
-router.post('/', upload.single('image'), async (req, res) => {
+router.post('/new', upload.single('image'), async (req, res) => {
   const product = new Product({
     name: req.body.name,
     category: req.body.category,

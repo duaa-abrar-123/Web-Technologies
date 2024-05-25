@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Product</title>
+  <title>Add New Product</title>
   <link rel="stylesheet" href="/css/product.css">
 </head>
 <body>
   <div class="container">
     <h2>Add New Product</h2>
-    <form action="/products" method="POST" enctype="multipart/form-data">
-      <div class="row">
-        <div class="col">
-          <label for="name" class="form-label required">Name:</label>
-          <input type="text" name="name" id="name" class="form-control" required>
-        </div>
-        <div class="col">
-          <label for="category" class="form-label required">Category:</label>
-          <input type="text" name="category" id="category" class="form-control" required>
-        </div>
-        <div class="col">
-          <label for="price" class="form-label required">Price:</label>
-          <input type="number" name="price" id="price" class="form-control" required>
-        </div>
-        <div class="col">
-          <label for="description" class="form-label required">Description:</label>
-          <textarea name="description" id="description" class="form-control" required></textarea>
-        </div>
-        <div class="col">
-          <label for="status" class="form-label required">Status:</label>
-          <select name="status" id="status" class="form-control select">
-            <option value="Available">Available</option>
-            <option value="Out of Stock">Out of Stock</option>
-          </select>
-        </div>
-        <div class="col">
-          <label for="image" class="form-label">Image:</label>
-          <input type="file" name="image" id="image" class="form-control">
-        </div>
+    <form action="/products/new" method="POST" enctype="multipart/form-data"> <!-- Form action matches the route -->
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
       </div>
-      <button type="submit" class="btn">Add Product</button>
+      <div>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+      </div>
+      <div>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+      <div>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+          <option value="Available">Available</option>
+          <option value="Out of Stock">Out of Stock</option>
+        </select>
+      </div>
+      <div style="flex: 0 0 100%;">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+      </div>
+      <div>
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image">
+      </div>
+      <div style="flex: 0 0 100%; text-align: center;">
+        <button type="submit" class="btn btn-primary">Add Product</button>
+      </div>
     </form>
   </div>
 </body>
